@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TrafficFlowBench 2026 – Team Simone Zappatini – Final report</title>
+<style>
+  page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+  :root { --ink: #0b0b0b; --ink2: #52514e; --rule: #d9d8d3; --accent: #2a78d6; }
+  html { font-family: "DejaVu Serif", Georgia, serif; font-size: 10pt; line-height: 1.42; color: var(--ink); }
+  body { margin: 0; }
+  h1 { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 17pt; line-height: 1.2; margin: 0 0 4pt; }
+  h2 { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 12.5pt; margin: 16pt 0 5pt; break-after: avoid; }
+  h3 { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 10.5pt; margin: 11pt 0 3pt; break-after: avoid; }
+  p { margin: 0 0 6pt; text-align: justify; hyphens: auto; }
+  .meta { font-family: "DejaVu Sans", Arial, sans-serif; color: var(--ink2); font-size: 9pt; margin-bottom: 10pt; }
+  .abstract { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 7pt 0; margin: 8pt 0 10pt; }
+  table { border-collapse: collapse; width: 100%; margin: 4pt 0 9pt; font-family: "DejaVu Sans", Arial, sans-serif; font-size: 8pt; break-inside: avoid; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 2.4pt 4pt; text-align: left; vertical-align: top; }
+  th { color: var(--ink2); font-weight: 600; border-bottom: 1px solid #a9a8a3; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  caption { caption-side: bottom; text-align: left; color: var(--ink2); font-size: 8pt; padding-top: 3pt; }
+  figure { margin: 6pt 0 10pt; break-inside: avoid; }
+  figure img { display: block; max-width: 100%; }
+  figcaption { color: var(--ink2); font-size: 8.5pt; font-family: "DejaVu Sans", Arial, sans-serif; margin-top: 2pt; }
+  code { font-family: "DejaVu Sans Mono", monospace; font-size: 8.3pt; }
+  pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8pt; background: #f6f6f4; padding: 5pt 7pt; margin: 4pt 0 8pt; white-space: pre-wrap; break-inside: avoid; }
+  ul, ol { margin: 0 0 6pt 15pt; padding: 0; }
+  li { margin-bottom: 2.5pt; }
+  .small { font-size: 8.5pt; color: var(--ink2); }
+  b.k { font-family: "DejaVu Sans", Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<h1>Validating against a shifted world: reconstruction, queue forecasting, physics and OD estimation on TrafficFlowBench</h1>
+<div class="meta">2026 IEEE Big Data Cup – TrafficFlowBench · Team <b>Simone Zappatini</b> (Kaggle: simonezappatini) · Independent · szappatinigmail.com<br>
+Selected final submissions: <b>v19</b> (public 0.86106) and <b>v18</b> (public 0.85998) · Code: single entry script <code>scripts/riproduci.sh</code></div>
+
+<div class="abstract">
+<p><b>Summary.</b> We treat the challenge as a problem of <i>validation under distribution shift</i>. Every decision was taken on local validation built from the training months – temporal block cross-validation, Task 2 windows rebuilt with the published selection rule over all nine training months, full “pseudo-months” that reproduce the evaluated masking, and re-masking of the released evaluated months – and the public leaderboard was used only to check that a locally measured gain transferred. Two findings drove most of the progress. First, each evaluated month is a different “world”: the free-flow speed level of each link moves by about 1.2 km/h (up to 3–5 km/h) between the training period and each evaluated month, while it is stable to 0.03 km/h inside training. Second, the evaluated months contain holes that the training month does not have: around every Task 2 window the organizers blank the whole corridor from T+5 to T+90 minutes, and a Task 1 model that never saw such holes reconstructs the flow there 2.5 times worse than plain interpolation. Fixing these two mismatches – a model trained on reproduced holes plus a small convolutional network, and an equivariant correction (E1) that removes the month’s level shift before the models and restores it afterwards – gave the gains that transferred to the leaderboard, and also lifted the physics term, since the conservation check is computed on our Task 1 reconstructions. Task 1 is a LightGBM residual model on top of time/space interpolation (55 features, including month-level and low-rank month completion features). Task 2 uses per-condition gradient boosting with a strict as-of-origin pipeline, verified by truncating all data after T; ongoing queues come from a stack of LightGBM, XGBoost and CatBoost with window context. Task 4 keeps the official NNLS with the split prior (λ = 0.05), after two principled alternatives lost clearly. We also report what did not transfer and why we think so.</p>
+</div>
+
+<h2>1. Final method at a glance</h2>
+<table>
+<tr><th>Task (weight)</th><th>Method in v19</th><th>How it was chosen</th></tr>
+<tr><td>1 State (0.35)</td><td>Base value: interpolation in time on the same link, then in space, then the training profile. LightGBM (800 trees, 127 leaves) predicts the residual of speed and of flow per lane from 55 features. Around the Task 2 windows (targets from T to T+24) a second LightGBM trained on reproduced holes is averaged with a small residual CNN (E2). E1: the month’s free-flow level shift is removed from the inputs and restored to the predicted speeds.</td><td>3-fold temporal block CV; reproduced holes; pseudo-months; re-masking of validation and private</td></tr>
+<tr><td>2 Queues (0.30)</td><td>Onset: LightGBM on features at T, prediction only at T+30, threshold 0.40, E1 level correction. Ongoing: stack of LightGBM, XGBoost and CatBoost with window context, threshold 0.45; trained on rebuilt windows plus randomly selected ongoing windows (6 seeds). Strictly data ≤ T.</td><td>Block CV on 4,196 rebuilt windows plus 9,752 random ongoing windows; 80 official train windows as an out-of-sample check</td></tr>
+<tr><td>3 Physics (0.15)</td><td>No separate output: computed by the organizers on the Task 1 answers.</td><td>Local estimator aligned with the official evaluator</td></tr>
+<tr><td>4 ODME (0.20)</td><td>Official NNLS towards the split prior, λ = 0.05, link counts of the split.</td><td>Two alternatives (KL, mean prior) lost clearly on the leaderboard</td></tr>
+</table>
+<p>Public leaderboard: v19 0.86106 (283rd of 703 teams on 31 October 2026). Local validation and leaderboard history are in Section 8. No external data, no pre-trained models, no paid APIs.</p>
+
+<h2>2. Data and what makes the problem hard</h2>
+<p>Ten directional freeway corridors (five families × two directions), one detector per link, 5-minute steps (288 per day). The training split covers June 2030 – February 2031 (273 days) with an unmasked layer; the public leaderboard scores March 2031 (<i>validation</i>) and the private one April 2031 (<i>private</i>), both regenerated with new seeds on 11 September 2026. The total score is 0.35·S<sub>state</sub> + 0.30·S<sub>queue</sub> + 0.15·S<sub>physics</sub> + 0.20·S<sub>ODME</sub>, averaged per corridor and then over families. Four properties of the data shaped the work.</p>
+<ol>
+<li><b>Noise floor.</b> In free flow, speed is a per-link constant of the month plus white noise of about 0.85–1.7 km/h (the standard deviation of the level and of the noise coincide, e.g. 0.91 and 0.91 km/h on D12_I5_N), with no dependence on the hour and none on flow. Flow fluctuations, instead, are real and 90% correlated between neighbouring links. Speed has an irreducible error; flow can be learned from neighbours.</li>
+<li><b>Each evaluated month is a different world.</b> A classifier barely separates two consecutive training months (AUC 0.47, at most 0.59) but separates validation from February (0.70) and private from validation (0.72), on all ten corridors. No global distribution differs; what separates them is the speed level per link: it changes by 0.03 km/h between training months and by 1.17 km/h on average (up to 3–5 km/h) towards validation and private. The shifts of the two evaluated months correlate 0.5, i.e. they are independent draws around the training level. Flow per lane per link moves by 2.5% (1.3% inside training), queue share by 2.5 points (1.3). Block cross-validation lives entirely inside one world and cannot see this shift.</li>
+<li><b>Task 2 holes.</b> In the evaluated months, for each of the ten Task 2 windows, all eligible non-target cells of the corridor are blanked from T+5 to T+90 minutes, while the window history (T−60 … T−5) stays observed and carries no targets (we rebuilt every validation hole from the window index exactly this way). The holes are 1.4% of eligible cells but touch 16–26% of link-days, start at the onset of queues, and do not exist in training. The Task 3 evaluator puts the truth in them and compares our reconstructions of the 1.6% of targets that fall inside.</li>
+<li><b>Task 2 is tiny on the leaderboard.</b> Five windows per condition and corridor per month; the organizers state a per-window IoU standard deviation of 0.375. A Task 2 change of +0.01 IoU is invisible on the public leaderboard, so Task 2 can only be validated locally.</li>
+</ol>
+
+<h2>3. Validation protocol</h2>
+<p>All choices were made with rules written <i>before</i> looking at the results (typically: “adopt if the paired gain is positive in at least 25 of 30 corridor·folds and the mean exceeds a stated margin”), and at equal local score we preferred the simpler and more stable method.</p>
+<ul>
+<li><b>Temporal blocks.</b> Three blocks of three months (days 0–91, 92–182, 183–272). Features use only the day of the cell, so blocks do not leak. We report the mean and the worst fold, and count corridor·folds that improve.</li>
+<li><b>Task 1 metrics computed exactly as the evaluator.</b> Our S<sub>state</sub> reproduces <code>score_task1.py</code> (the official baseline gives 0.6255 on D12_I5_N with both). For physics we built an estimator aligned with the official one: same network parameters, same observable links, ramp validity and transitions within 0.12%; S<sub>FD</sub> is identical to the official value (0.9907 on D12_I405_S R1); on the naive historical baseline it gives S<sub>physics</sub> 0.3243 against 0.3242 official. S<sub>FD</sub> can even be computed exactly on the evaluated months without truth.</li>
+<li><b>Reproduced holes</b> (<code>cv_buchi.py</code>): in each block we select Task 2 windows with the published rule, blank the corridor as in the evaluated months, and score the targets from T to T+24 with the truth in the blanked cells, as the evaluator does.</li>
+<li><b>Pseudo-months</b> (<code>cv_pseudomesi.py</code>): each training month is turned into an evaluated month – ten Task 2 windows placed as in <code>window_index.csv</code>, protected history, holes – and fully reconstructed with the submission pipeline; we score 0.35·S<sub>state</sub> + 0.05·S<sub>FD</sub> + 0.10·S<sub>LWR</sub> with paired bootstrap intervals over 90 corridor·months, in the training world and in <b>shifted worlds</b> (each link gets δ ~ N(0, 1.2 km/h) in free flow only, the shift we measured).</li>
+<li><b>Re-masking of the real evaluated months</b> (<code>rimaschera_valutati.py</code>): we hide 10% of the observed cells of validation and private (two seeds) and reconstruct them. This measures S<sub>state</sub> in the real shifted worlds using only released inputs; it compares models already trained and never selects hyperparameters.</li>
+<li><b>Task 2 windows</b>: 4,196 windows rebuilt over all nine months with the published rule (we recover 46 of the 80 official training windows; onset windows are the first admissible origin in 39 of 40 cases), plus ongoing windows drawn at random among the admissible origins, which mimic the official ongoing selection (persistence IoU 0.748 vs 0.760 on the official ones, 0.835 on the first-origin windows). The 80 official training windows are kept as an out-of-sample check.</li>
+<li><b>Leaderboard as a transfer check only.</b> Before each submission we wrote the expected change. Over the Task 1 changes the pseudo-months order methods correctly but inflate the effect by about 1.7×; we therefore expected ≈ 0.6 × the pseudo-month gain, and this calibration held (Figure 3).</li>
+</ul>
+
+<h2>4. Task 1 – state reconstruction</h2>
+<h3>4.1 Base and residual model</h3>
+<p>The first submission (v1) interpolated linearly in time on the same link, then in space across links, then fell back on the training median profile (local S<sub>state</sub> ≈ 0.905). v6 adds LightGBM on the residual of that base, separately for speed and flow per lane (800 trees, learning rate 0.05, 127 leaves, min_data_in_leaf 200, feature/bagging fraction 0.8, λ<sub>2</sub> = 1, seed 0). Features (48 in v6): previous/next observation on the same link and their time distances; upstream/downstream observations at the same instant and their distances in km; time and space interpolations of speed, flow and occupancy; the deviation of neighbouring links (±1, ±2) from their straight line across the same temporal gap – if a neighbour bends inside the gap, the target probably does too –; neighbours at t±1; observation density around the cell; link statics (free-flow speed, capacity and jam density per lane, lanes, length, relative position); time of day, weekday and the masking regime. Local S<sub>state</sub> went from 0.905 to 0.939 and v6 gained +0.0139 on the leaderboard over v3.</p>
+
+<h3>4.2 Why two locally better models did not transfer, and the Task 2 holes</h3>
+<p>v7 (3,200 trees: +0.0018 S<sub>state</sub> locally, better in 30 of 30 corridor·folds) lost 0.0010 on the leaderboard, and v9 (training on cells copied into shifted worlds) lost 0.0005. Re-masking the real evaluated months showed that S<sub>state</sub> did rise there (v9: +0.0010/+0.0012 in validation/private); S<sub>FD</sub>, computed exactly, did not explain it. The cause was in the holes. Inside them the versions diverged most (flow v7−v6: 200 veh/h on average inside, 14 outside), and that 1.6% of the targets carried 12–13% of the whole difference in vehicle count N = qL/v between versions. Reproducing the holes in training showed that LightGBM trained without holes reconstructs flow inside them far worse than plain interpolation, and that this costs about 0.09 of S<sub>LWR</sub> per month (Figure 1).</p>
+<figure><img src="fig_buchi.svg" style="width:88%">
+<figcaption>Figure 1. Flow error inside the Task 2 holes reproduced in training (targets from T to T+24, 3-fold block CV). The model that never saw holes extrapolates the pre-hole regime; training on reproduced holes fixes it, more copies of the holes and averaging with the E2 network help further.</figcaption></figure>
+<p>v10 therefore uses two models: the v6 model everywhere except the targets from T to T+24 of each Task 2 window of the split (read from the released <code>window_index.csv</code>), where a model trained also on reproduced holes is used; this region covers 100% of the real holes and 2–4% of the targets. Expected +0.004 (0.10 × 0.04 of S<sub>LWR</sub>), observed +0.0035 – the first Task 1 change whose local estimate transferred. v12 trains the holes model on three more copies of the holes with different windows (6,160 more windows; RMSE in the holes 8.21 → 7.43 km/h for speed and 78.7 → 72.9 veh/h per lane for flow, better in 30/30 and 28/30 corridor·folds), observed +0.0004 against +0.0005 expected. v14 averages it with E2, a small residual CNN (8 dilated residual blocks, 64 channels) that sees the whole corridor from T−12 to T+36 and reconstructs the window zone jointly (pseudo-months +0.00047, 63/9; observed +0.0003). The network alone is not better (it improves speed and worsens flow), but its errors differ from the trees’ and the average improves speed, flow and the conservation residual. An extra loss on the change of density error (E3) reduced the conservation residual by 12% but lost RMSE and did not pay on the total.</p>
+
+<h3>4.3 The month’s world: E1 and month-level features</h3>
+<p>We first checked on the real evaluated months where the level shift lives. Regressing, per occupancy band, each link’s speed shift on the shift of its night level (1:00–4:00, always free flow):</p>
+<table style="width:70%">
+<tr><th>Occupancy (train quantiles)</th><th class="n">v / v<sub>f</sub></th><th class="n">Slope</th><th class="n">Correlation</th></tr>
+<tr><td>0–0.50</td><td class="n">0.999</td><td class="n">0.996</td><td class="n">0.999</td></tr>
+<tr><td>0.80–0.90</td><td class="n">1.000</td><td class="n">0.998</td><td class="n">0.994</td></tr>
+<tr><td>0.90–0.95</td><td class="n">0.999</td><td class="n">0.985</td><td class="n">0.923</td></tr>
+<tr><td>0.95–0.98</td><td class="n">0.705</td><td class="n">0.780</td><td class="n">0.214</td></tr>
+<tr><td>0.98–1</td><td class="n">0.344</td><td class="n">0.162</td><td class="n">0.042</td></tr>
+</table>
+<p>The shift is entirely a free-flow phenomenon and vanishes in congestion. <b>E1</b> (<code>task1.equivariante</code>) estimates δ per link and day as the night level of the month observed so far minus the training level, subtracts it from the observed speeds with a free-flow weight (full above 0.95·v<sub>f</sub>, zero below 0.8·v<sub>f</sub>), runs the unchanged models in the “training world”, and adds δ back to the predicted speeds with the same weight. Nothing is trained. On the re-masked real months: S<sub>state</sub> +0.0027/+0.0029 (validation/private, 20/20 corridor·seeds), S<sub>LWR</sub> +0.0018/+0.0020; expected +0.0012 on the total, observed +0.0012 (v11). Interpolation is invariant to E1, as it should be. v13 adds month-level features (the month’s free-flow level of the link, its shift from training, the deviation of the interpolated speed from that level) and trains on training cells plus the same cells in one shifted world per block: pseudo-months +0.0006 in both worlds, re-masked months +0.0010 of S<sub>state</sub> (19/20); observed +0.0006. The gain is not only robustness: the month level acts as a denoised reference in free flow, where the interpolation between two noisy neighbours is worse.</p>
+
+<h3>4.4 E5: low-rank completion of the month</h3>
+<p>For each corridor and month the (day × instant) × link matrix of eligible observations of the masked layer is completed at rank r by alternating least squares (ridge 1), for speed and flow per lane; ranks (4 for speed, 2 for flow) were chosen on held-out observed cells. Alone the low-rank estimate is poor (8.7 km/h, 58 veh/h/lane, against about 1.7 km/h and 33 veh/h/lane for our model): queues break the low-rank structure. As features next to the interpolation, however, they give the model the month’s profile of the link: block CV 0.94008 → 0.94194 S<sub>state</sub>, S<sub>LWR</sub> 0.5987 → 0.6027, total part +0.00105 (25/30 corridor·folds, meeting the pre-declared rule); re-masked real months S<sub>state</sub> +0.0021 (20/20 validation, 19/20 private). This is v19, observed +0.0011.</p>
+
+<h3>4.5 What did not help</h3>
+<ul>
+<li>More capacity (3,200 trees, v7) and world randomization alone (v9): better locally, not on the leaderboard; the holes and the level shift were the real mismatches.</li>
+<li>A direct density model (k = q/v in L1) averaged with the flow estimate: S<sub>LWR</sub> +0.008 but S<sub>state</sub> −0.0017, total +0.0003 – rejected.</li>
+<li>XGBoost next to LightGBM, at every blending weight: in the main model less than +0.0001 on the total, inside the holes worse in all folds. Two tree implementations with the same inputs make the same errors; diversity came from different information (the zone-level view of E2).</li>
+<li>S<sub>FD</sub> has no margin: in free flow its deviation is q·|v<sub>f</sub>/v − 1| with v<sub>f</sub> the 0.99 quantile of observed speed, removable only by pushing speeds to v<sub>f</sub> at the expense of S<sub>state</sub>.</li>
+</ul>
+
+<h2>5. Task 3 – physics through Task 1</h2>
+<p>Since the physics term is computed on our Task 1 answers, we optimized it only through Task 1 and measured it with the aligned estimator. Two thirds of it is the LWR conservation term S<sub>LWR</sub> = 1 − Σ|ΔN̂ − ΔN| / Σ|ΔN| over transitions of the regime’s days, with N = (q/v)·L. Because masks are drawn per cell, an isolated target counts twice (2·|N̂ − N|): what matters is the L1 error on density, which concentrates in queued cells where N is large and small speed errors are amplified. Ramps are synthetic and uncorrelated with mainline flow differences (correlation 0.08), so they carry no information for reconstruction. The v3 → v6 gain (+0.0139) exceeded the S<sub>state</sub> part (≈ +0.012), i.e. S<sub>physics</sub> rose by ≈ 0.013 (≈ +0.002 on the total) with a better Task 1; the holes model alone moved S<sub>LWR</sub> of a month by about +0.04. Our physics gains came from correcting a mismatch between training and evaluated months, not from imposing a physical projection on the predictions.</p>
+
+<h2>6. Task 2 – queue forecasting</h2>
+<h3>6.1 Formulation and features</h3>
+<p>A queue is speed ≤ 0.6·v<sub>f</sub>; the forecast covers T+5 … T+30 for every link of the window, scored by spatio-temporal IoU. For <code>queue_onset</code> windows (no queue in the history) the selection rule implies – and the organizers confirmed – that the queue appears only at T+30, so we predict only that step. One LightGBM per condition (400 trees, 63 leaves, seed 0) is trained on rows (window × link × step) with 42 features: speed ratio v/v<sub>f</sub> at T and at lags up to T−12, minimum, means and slope, age of the last observation, flow, flow/capacity and occupancy, ratios of up to four upstream and downstream links, whether the link is queued and the distance to the nearest queue upstream and downstream at several lags, queue duration, number of queued links in the corridor, link statics, time of day, step, and the historical queue frequency of the link at that instant and at T, computed on the whole training split. Without the frequency the onset IoU drops by 0.034.</p>
+<h3>6.2 As-of-origin compliance</h3>
+<p>For a window with origin T we use only <code>window_history.parquet</code> (T−60 … T−5), the row at T of the masked layer of the split, and quantities computed on the training split (frequencies, models, thresholds). <code>scripts/verifica_task2_online.py</code> truncates both the masked layer and the window history at T for 48 windows (8 corridors × validation/private × onset/ongoing) and recomputes the forecasts: they are identical in all 48. Thresholds (0.40 onset, 0.45 ongoing) maximize the worst fold of the block CV and sit on flat plateaus (onset within 0.005 between 0.30 and 0.45). No Task 2 choice was made on the leaderboard, whose labels are after T.</p>
+<h3>6.3 Results and decisions</h3>
+<table>
+<tr><th>Change (submission)</th><th>Validation</th><th class="n">Local IoU</th><th class="n">Δ [95% bootstrap]</th><th>Decision</th></tr>
+<tr><td>LightGBM per condition vs persistence of the state at T (v3)</td><td>onset / ongoing, rebuilt windows</td><td class="n">0.865 / 0.914</td><td class="n">vs 0.002 / 0.815</td><td>adopted</td></tr>
+<tr><td>Ongoing trained on rebuilt + random windows (v8)</td><td>40 official ongoing windows, out of sample</td><td class="n">0.857</td><td class="n">vs 0.835</td><td>adopted</td></tr>
+<tr><td>Random ongoing windows from 6 seeds (v15)</td><td>9,752 random ongoing windows</td><td class="n">0.8423</td><td class="n">+0.0128 [+0.0105, +0.0153]</td><td>adopted (3/3 folds)</td></tr>
+<tr><td>Stack LightGBM + XGBoost + CatBoost + window context, ongoing (v18)</td><td>9,752 random ongoing windows</td><td class="n">0.8650</td><td class="n">+0.0228 [+0.0201, +0.0255]</td><td>adopted (3/3 folds)</td></tr>
+<tr><td>Same stack for onset (v16)</td><td>2,102 onset windows</td><td class="n">0.8787</td><td class="n">+0.0137 [+0.0078, +0.0189]</td><td>not in final (see 6.4)</td></tr>
+<tr><td>E1 level correction for onset (v17)</td><td>onset, training / two shifted worlds</td><td class="n">0.8643</td><td class="n">−0.0007 / +0.0120 / +0.0067</td><td>adopted (robustness)</td></tr>
+<tr><td>Same-month queue features before T</td><td>2,102 onset windows</td><td class="n">0.8572</td><td class="n">−0.0078 [−0.0128, −0.0030]</td><td>rejected</td></tr>
+<tr><td>IoU-oriented top-k decoding, calibration, Viterbi smoothing</td><td>random ongoing windows</td><td class="n">0.8274</td><td class="n">−0.0020 [−0.0040, −0.0000]</td><td>rejected</td></tr>
+<tr><td>Onset trained also on origins with earlier queues</td><td>2,102 onset windows</td><td class="n">0.8388</td><td class="n">−0.026 [−0.035, −0.017]</td><td>rejected</td></tr>
+</table>
+<p>The stack is nested: second-level training rows receive out-of-fold first-level probabilities, plus context of the LightGBM probability inside the window (neighbours’ probabilities, rank, maximum and sum over the window), which a cell-wise model cannot see. A plain stack (features + LightGBM probability) is worse; it pays only with the window context. For ongoing, XGBoost with deeper trees beats LightGBM (+0.0104) and CatBoost loses, while for onset the reverse holds – with 13 million rows per fold capacity matters for ongoing. Smoothing the labels (to approximate the latent-state truth used by the evaluator) changes 2.4% of queued labels and leaves the ranking of methods unchanged.</p>
+<h3>6.4 Error analysis and an unresolved disagreement</h3>
+<p>On ongoing windows the main errors are queues predicted to persist that dissolve (43,400 cells) and growth onto new links that is not predicted (26,200), against 11,600 and 12,700 of the opposite kinds. For onset, the weak spot is a queue born on a link where queues historically do not form (frequency < 0.02: 89 windows, IoU 0.15–0.20 for every method, 233 false negatives against 36 hits); at T these links are still at ≥ 0.9·v<sub>f</sub>, so they are most likely incidents with no precursor in the data. Weakest corridors: D7_I10_W (0.73–0.76), D12_I5_S (0.76–0.79), D7_I405_S (0.80–0.84). No engine wins consistently in any band, so a per-band switch has nothing to stand on.</p>
+<p>The onset stack (v16) is the one decision where local evidence and the leaderboard disagree beyond noise: every local measure favours it (folds, shifted worlds where LightGBM loses 0.007–0.013 and the stack almost nothing, official windows 0.9169 → 0.9548), yet the public score dropped by 0.0049 from 26 changed cells in 10 public windows. Resampling the per-window differences of the changed windows from the CV, a sum this low occurs with probability 0.5%. The submission function reproduces the CV to 3·10<sup>−8</sup> with fold models and passes the online test, so it is not a pipeline error. We did not find the cause; by our own rule (Task 2 is not selected on the leaderboard) the stack would stay, but with an unexplained 0.5%-probability contradiction on the only out-of-world data we have, we kept the simpler E1 LightGBM for onset in the final submissions.</p>
+
+<h2>7. Task 4 – OD estimation</h2>
+<p>Counts exist only on mainline links and are consistent with the path structure; the rank of the counted links equals the number of zones minus one, so counts identify how many vehicles cross each section but not between which zones. The prior has too many long trips: A·b exceeds the counts 1.5–2.5 times (except D12_I405), and the NNLS drives 50–66% of the paths to zero, almost all long. We tested two principled alternatives that also reproduce the counts (99.99–100%): minimum relative entropy with respect to the prior (f = b·exp(Aᵀμ), which corrects the trip-length bias multiplicatively without zeroing paths; f/b falls smoothly with path length, from 0.85 to 0.06 by quintile on D7_I10_E), and NNLS towards the mean of the three priors (train, validation, private share a common part, corr(log b<sub>train</sub>, log b<sub>val</sub>) = 0.73–0.75, plus a split-specific part with σ ≈ 0.62). Since S<sub>od</sub>, S<sub>dev</sub> and S<sub>attr</sub> need reference flows that are not released, even for training, the choice between estimators that are exact on the counts cannot be made locally; we spent exactly two submissions on it. Both lost clearly (S<sub>ODME</sub> ≈ −0.15 for KL, ≈ −0.26 for the mean prior), so the reference solution is closer to NNLS on the split prior, and we kept the official estimator (λ = 0.05) without tuning λ on the leaderboard.</p>
+
+<h2>8. Results</h2>
+<figure><img src="fig_classifica.svg" style="width:100%">
+<figcaption>Figure 2. Public leaderboard score of each submission from v3 (v1, the interpolation/persistence/NNLS baseline, scored 0.72215). Blue: versions adopted as the new reference; orange: discarded.</figcaption></figure>
+<table>
+<tr><th>Version</th><th>Change with respect to the previous reference</th><th class="n">Expected Δ</th><th class="n">Public</th><th class="n">Observed Δ</th></tr>
+<tr><td>v1</td><td>T1 interpolation; T2 persistence; T4 NNLS with split prior</td><td class="n">—</td><td class="n">0.72215</td><td class="n">—</td></tr>
+<tr><td>v3</td><td>T2 LightGBM per condition, onset only at T+30</td><td class="n">+0.144</td><td class="n">0.83843</td><td class="n">+0.116</td></tr>
+<tr><td>v4 / v5</td><td>T4 KL to prior / mean of three priors</td><td class="n">?</td><td class="n">0.80818 / 0.78720</td><td class="n">−0.030 / −0.051</td></tr>
+<tr><td>v6</td><td>T1 LightGBM on interpolation residuals</td><td class="n">+0.012 (state only)</td><td class="n">0.85232</td><td class="n">+0.0139</td></tr>
+<tr><td>v7</td><td>T1 3,200 trees</td><td class="n">+0.0012</td><td class="n">0.85128</td><td class="n">−0.0010</td></tr>
+<tr><td>v8</td><td>T2 ongoing on rebuilt + random windows</td><td class="n">small</td><td class="n">0.85098</td><td class="n">−0.0013</td></tr>
+<tr><td>v9</td><td>T1 trained also in shifted worlds</td><td class="n">small</td><td class="n">0.85050</td><td class="n">−0.0005</td></tr>
+<tr><td>v10</td><td>T1 second model on reproduced Task 2 holes</td><td class="n">+0.004</td><td class="n">0.85449</td><td class="n">+0.0035</td></tr>
+<tr><td>v11</td><td>T1 E1 level correction</td><td class="n">+0.0012</td><td class="n">0.85566</td><td class="n">+0.0012</td></tr>
+<tr><td>v12</td><td>T1 holes model with three extra copies</td><td class="n">+0.0005</td><td class="n">0.85606</td><td class="n">+0.0004</td></tr>
+<tr><td>v13</td><td>T1 month-level features, shifted-world training</td><td class="n">+0.0004</td><td class="n">0.85664</td><td class="n">+0.0006</td></tr>
+<tr><td>v14</td><td>T1 average with E2 network in the window zones</td><td class="n">+0.0003</td><td class="n">0.85689</td><td class="n">+0.0003</td></tr>
+<tr><td>v15</td><td>T2 ongoing random windows from 6 seeds</td><td class="n">+0.002</td><td class="n">0.85607</td><td class="n">−0.0008</td></tr>
+<tr><td>v16</td><td>T2 onset stack (discarded)</td><td class="n">+0.002</td><td class="n">0.85118</td><td class="n">−0.0049</td></tr>
+<tr><td>v17</td><td>T2 onset with E1 (on v15)</td><td class="n">+0.001</td><td class="n">0.85624</td><td class="n">+0.0002</td></tr>
+<tr><td>v18</td><td>T2 ongoing stack</td><td class="n">+0.0027</td><td class="n">0.85998</td><td class="n">+0.0037</td></tr>
+<tr><td><b>v19</b></td><td>T1 E5 low-rank month features</td><td class="n">+0.0006–0.001</td><td class="n"><b>0.86106</b></td><td class="n">+0.0011</td></tr>
+<caption>Expected changes were written before each submission from local validation (Task 1: 0.6 × pseudo-month gain or re-masked months; Task 2: 0.30 × weight of the condition × local IoU gain).</caption>
+</table>
+<figure><img src="fig_atteso_osservato.svg" style="width:78%">
+<figcaption>Figure 3. Expected vs observed change of the total score. After the holes and the level shift were understood (v10 onward), every Task 1 change landed close to its expectation; Task 2 changes scatter widely, as expected from five windows per condition and corridor.</figcaption></figure>
+<p><b>Choice of the two final submissions.</b> v19 is the best version on every local measure and on the leaderboard. v18 differs from v19 only in the main Task 1 model (no E5 features): it hedges against E5 not transferring to April, while sharing the Task 2 and Task 4 parts that we consider settled. Both are reproduced by the same code.</p>
+
+<h2>9. Reproducibility</h2>
+<p>The package regenerates the selected submission from the released data, training included, with one command:</p>
+<pre>scripts/scarica_dati.sh            # download and extract the release into data/kaggle_public (Kaggle API)
+scripts/riproduci.sh v19           # environment, features, training, inference -> submissions/v19.csv
+scripts/riproduci.sh v18           # second selected submission (shares every step except the main Task 1 model)</pre>
+<p>Environment: Python 3.12.8 and dependencies pinned in <code>uv.lock</code> (LightGBM 4.7.0, XGBoost 3.4.1, CatBoost 1.2.10, PyTorch 2.14.1, numpy 2.5.4, pandas 3.0.6, scipy 1.18.1, pyarrow 26.0.0). Seeds are fixed in every step (LightGBM/XGBoost/CatBoost seed 0, PyTorch seed 0, NumPy generators seeded per corridor and block); thread counts are those of the original runs. Everything runs on CPU; no GPU is required. Details, step times and memory peaks are in the package README.</p>
+<p><b>Verification (31 Oct – 1 Nov 2026; i9-11900, 16 threads, 61 GB RAM).</b> In a fresh clone (new environment, data cache rebuilt from the raw release), inference with the frozen models gives a v19 file <b>byte-identical</b> to the one uploaded to Kaggle (21 min, 5 GB peak). For v18, Tasks 2 and 4 are identical and Task 1 differs only in the last float32 bit (170 of 6.7 M cells change by 0.001 in the last written decimal): its Task 1 part was computed on 20 October for v14 with the same models and reused up to v18. The full run takes 6 h 31 min for v19 (E2 network on CPU 3 h 04 min, Task 2 stack 1 h 44 min; peak 25 GB) and 23 min more for v18. Retraining is not bit-identical: multi-threaded LightGBM is not bit-deterministic (the first trees coincide, later ones differ in the last digits) and E2 was originally trained on a GPU. The retrained v19 differs in 2.6% of the Task 1 cells (RMSE of the difference 0.10 km/h, 0.96 veh/h per lane) and in 60 of 174,000 Task 2 cells; Task 4 is identical. As RMSE obeys the triangle inequality and 1 − IoU is a metric (Jaccard distance), this bounds the change of the private score without the truth: 0.00036 from S<sub>state</sub>, 0.0028 from S<sub>queue</sub>, plus about 0.00006 from physics. The total, at most 0.0032 (0.4% of the score), is within the 1% tolerance; v18 gives the same figures.</p>
+
+<h2>10. Limitations and lessons</h2>
+<ul>
+<li>Our position (public 0.861, top teams ≈ 0.93) shows that a large part of the attainable score lies elsewhere, most likely in Task 2 and in Task 4, where the reference cannot be validated locally. We chose robustness over leaderboard tuning by design.</li>
+<li>The most valuable work was not modelling but finding where the evaluated months differ from training (level shift, holes) and building validation that reproduces those differences. Both mismatches were invisible to block cross-validation; both were found by explaining why locally better models failed to transfer.</li>
+<li>Calibrating expectations (≈ 0.6 × the pseudo-month gain) turned the leaderboard into a check rather than a target: after v10 every Task 1 change landed close to its prediction.</li>
+<li>Task 2 remains noisy; the onset stack disagreement is unresolved and documented rather than explained away.</li>
+</ul>
+
+<h2>Appendix – declarations</h2>
+<p class="small"><b>External data and models:</b> none; no pre-trained models; no paid APIs in the method. All libraries are under OSI-approved licences that allow commercial use (MIT, BSD-3, Apache-2.0, PSF). The organizers’ repository (MIT) was used for evaluators and baselines during development only. <b>Compute:</b> own machines (16-thread Intel i9-11900, 61 GB RAM, Ubuntu; an RTX 4090 server was used during development for some experiments, not needed to reproduce). <b>Team:</b> one member, one Kaggle account; no private sharing of code. <b>AI assistance:</b> development was assisted by an AI programming assistant (Claude Code, Anthropic), used to write code, run experiments and draft documentation under the author’s direction; it is not part of the method and produces no predictions. Disclosed for transparency in line with IEEE policy on AI-generated content.</p>
+</body>
+</html>

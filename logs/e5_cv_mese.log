@@ -1,0 +1,28 @@
+5,527,033 celle (4 s)
+fold 0 std (430 s)
+fold 0 std+e5 (963 s)
+fold 1 std (1871 s)
+fold 1 std+e5 (2434 s)
+fold 2 std (2715 s)
+fold 2 std+e5 (2972 s)
+
+media su corridoi e fold
+        S_state    S_LWR   rmse_v    rmse_q    parte
+metodo                                              
+std     0.94008  0.59867  1.62427  32.39109  0.38890
+std+e5  0.94194  0.60267  1.57029  31.48388  0.38995
+
+Δ std+e5 − std: parte +0.00105, S_state +0.00186, S_LWR +0.00400, rmse_v -0.05398, rmse_q -0.90722; parte meglio in 25 su 30 corridoi·fold, minimo -0.00268
+
+per corridoio (Δ parte, media sui fold)
+pannello
+D12_I405_N    0.00057
+D12_I405_S    0.00178
+D12_I5_N     -0.00050
+D12_I5_S      0.00044
+D7_I10_E      0.00067
+D7_I10_W      0.00234
+D7_I210_E     0.00228
+D7_I210_W     0.00156
+D7_I405_N     0.00014
+D7_I405_S     0.00122

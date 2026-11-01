@@ -1,0 +1,38 @@
+D7_I10_E: 526,578 celle (5 s)
+D7_I10_W: 451,179 celle (10 s)
+D7_I210_E: 825,953 celle (20 s)
+D7_I210_W: 400,963 celle (24 s)
+D7_I405_N: 937,180 celle (35 s)
+D7_I405_S: 456,552 celle (40 s)
+D12_I5_N: 748,371 celle (48 s)
+D12_I5_S: 437,105 celle (52 s)
+D12_I405_N: 415,992 celle (56 s)
+D12_I405_S: 327,160 celle (59 s)
+5,527,033 celle (7 s)
+fold 0 std (284 s)
+fold 0 std+e5 (562 s)
+fold 1 std (852 s)
+fold 1 std+e5 (1346 s)
+fold 2 std (1771 s)
+fold 2 std+e5 (2071 s)
+
+media su corridoi e fold
+        S_state    S_LWR   rmse_v    rmse_q    parte
+metodo                                              
+std     0.93929  0.59653  1.66094  32.39165  0.38840
+std+e5  0.94141  0.60151  1.59504  31.48800  0.38964
+
+Δ std+e5 − std: parte +0.00124, S_state +0.00212, S_LWR +0.00498, rmse_v -0.06590, rmse_q -0.90365; parte meglio in 25 su 30 corridoi·fold, minimo -0.00258
+
+per corridoio (Δ parte, media sui fold)
+pannello
+D12_I405_N    0.00087
+D12_I405_S    0.00147
+D12_I5_N     -0.00024
+D12_I5_S      0.00050
+D7_I10_E      0.00114
+D7_I10_W      0.00246
+D7_I210_E     0.00270
+D7_I210_W     0.00198
+D7_I405_N     0.00037
+D7_I405_S     0.00113

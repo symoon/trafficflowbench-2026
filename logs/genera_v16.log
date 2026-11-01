@@ -1,0 +1,1035 @@
+Task 1 D7_I10_E: fatto (0 s)
+Task 1 D7_I10_W: fatto (0 s)
+Task 1 D7_I210_E: fatto (0 s)
+Task 1 D7_I210_W: fatto (0 s)
+Task 1 D7_I405_N: fatto (0 s)
+Task 1 D7_I405_S: fatto (1 s)
+Task 1 D12_I5_N: fatto (1 s)
+Task 1 D12_I5_S: fatto (1 s)
+Task 1 D12_I405_N: fatto (1 s)
+Task 1 D12_I405_S: fatto (1 s)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:75: RuntimeWarning: Mean of empty slice
+  f["r_media_60"] = np.nanmean(r, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:80: RuntimeWarning: Mean of empty slice
+  f["q_media_60"] = np.nanmean(tutto_q, axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:74: RuntimeWarning: Mean of empty slice
+  f["r_media_15"] = np.nanmean(r[-4:], axis=0) if np.isfinite(r[-4:]).any() else np.full(L, np.nan)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:76: RuntimeWarning: Mean of empty slice
+  f["pendenza_r"] = f["r_media_15"] - np.nanmean(r[:6], axis=0)
+/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/src/tfb/task2_modello.py:81: RuntimeWarning: Mean of empty slice
+  f["o_media_15"] = np.nanmean(tutto_o[-4:], axis=0)
+code: 174,000 righe (29 s)
+odme: 70,708 righe (29 s)
+Scritto /home/simone-zappatini/Dev/kaggle/traffic-flow-bench/submissions/v16.zip (69 MB) in 125 s

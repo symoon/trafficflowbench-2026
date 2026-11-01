@@ -1,0 +1,31 @@
+D7_I10_E validation: 2,322 celle per seme (7 s)
+D7_I10_E private: 2,585 celle per seme (12 s)
+D7_I10_W validation: 2,114 celle per seme (18 s)
+D7_I10_W private: 2,096 celle per seme (22 s)
+D7_I210_E validation: 5,290 celle per seme (36 s)
+D7_I210_E private: 5,936 celle per seme (47 s)
+D7_I210_W validation: 1,396 celle per seme (51 s)
+D7_I210_W private: 1,680 celle per seme (55 s)
+D7_I405_N validation: 6,796 celle per seme (72 s)
+D7_I405_N private: 5,719 celle per seme (84 s)
+D7_I405_S validation: 1,975 celle per seme (89 s)
+D7_I405_S private: 1,902 celle per seme (94 s)
+D12_I5_N validation: 5,040 celle per seme (106 s)
+D12_I5_N private: 5,106 celle per seme (115 s)
+D12_I5_S validation: 1,957 celle per seme (120 s)
+D12_I5_S private: 2,099 celle per seme (124 s)
+Traceback (most recent call last):
+  File "/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/scripts/rimaschera_valutati.py", line 132, in <module>
+    main()
+  File "/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/scripts/rimaschera_valutati.py", line 106, in main
+    metodi[v] = (bv + mod["v"].predict(X[colonne], num_threads=a.thread),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 4894, in predict
+    return predictor.predict(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 1092, in predict
+    data = _data_from_pandas(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/simone-zappatini/Dev/kaggle/traffic-flow-bench/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 759, in _data_from_pandas
+    raise ValueError("Input data must be 2 dimensional and non empty.")
+ValueError: Input data must be 2 dimensional and non empty.

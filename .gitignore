@@ -1,0 +1,20 @@
+# Dati della competizione (~13 GB estratti), si riscaricano con scripts/scarica_dati.sh
+data/
+
+# Repository ufficiale degli organizzatori, si riclona con scripts/prendi_ufficiale.sh
+ufficiale/
+
+# Invii e artefatti generati
+submissions/*
+!submissions/.gitkeep
+models/
+*.parquet
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Risultati degli esperimenti
+outputs/

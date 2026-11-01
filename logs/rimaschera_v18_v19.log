@@ -1,0 +1,43 @@
+D7_I10_E validation: 64,662 celle per seme (21 s)
+D7_I10_E private: 64,774 celle per seme (40 s)
+D7_I10_W validation: 48,604 celle per seme (55 s)
+D7_I10_W private: 49,205 celle per seme (70 s)
+D7_I210_E validation: 137,442 celle per seme (110 s)
+D7_I210_E private: 134,899 celle per seme (147 s)
+D7_I210_W validation: 33,951 celle per seme (159 s)
+D7_I210_W private: 36,715 celle per seme (170 s)
+D7_I405_N validation: 169,335 celle per seme (220 s)
+D7_I405_N private: 154,916 celle per seme (262 s)
+D7_I405_S validation: 46,161 celle per seme (278 s)
+D7_I405_S private: 46,641 celle per seme (292 s)
+D12_I5_N validation: 114,595 celle per seme (326 s)
+D12_I5_N private: 113,420 celle per seme (357 s)
+D12_I5_S validation: 45,308 celle per seme (372 s)
+D12_I5_S private: 44,440 celle per seme (386 s)
+D12_I405_N validation: 40,369 celle per seme (399 s)
+D12_I405_N private: 39,529 celle per seme (411 s)
+D12_I405_S validation: 20,639 celle per seme (419 s)
+D12_I405_S private: 18,301 celle per seme (426 s)
+
+Media su corridoi e semi
+                   S_state              S_LWR           
+split             private validation private validation
+metodo                                                 
+interpolazione     0.9026     0.9036  0.8347     0.8335
+interpolazione_e1  0.9026     0.9036  0.8347     0.8335
+v18                0.9387     0.9386  0.8671     0.8667
+v18_e1             0.9387     0.9387  0.8670     0.8667
+v19                0.9408     0.9406  0.8693     0.8692
+v19_e1             0.9408     0.9407  0.8693     0.8689
+
+Differenze rispetto a v18 (meglio: corridoi·semi con differenza > 0)
+interpolazione validation: ΔS_state -0.0350 (meglio 0/20), ΔS_LWR -0.0332 (meglio 0/20)
+interpolazione private: ΔS_state -0.0361 (meglio 0/20), ΔS_LWR -0.0323 (meglio 0/20)
+v19 validation: ΔS_state +0.0020 (meglio 20/20), ΔS_LWR +0.0025 (meglio 17/20)
+v19 private: ΔS_state +0.0021 (meglio 18/20), ΔS_LWR +0.0023 (meglio 15/20)
+interpolazione_e1 validation: ΔS_state -0.0350 (meglio 0/20), ΔS_LWR -0.0332 (meglio 0/20)
+interpolazione_e1 private: ΔS_state -0.0361 (meglio 0/20), ΔS_LWR -0.0323 (meglio 0/20)
+v18_e1 validation: ΔS_state +0.0001 (meglio 15/20), ΔS_LWR +0.0001 (meglio 13/20)
+v18_e1 private: ΔS_state +0.0000 (meglio 12/20), ΔS_LWR -0.0001 (meglio 11/20)
+v19_e1 validation: ΔS_state +0.0021 (meglio 20/20), ΔS_LWR +0.0022 (meglio 17/20)
+v19_e1 private: ΔS_state +0.0021 (meglio 19/20), ΔS_LWR +0.0022 (meglio 15/20)

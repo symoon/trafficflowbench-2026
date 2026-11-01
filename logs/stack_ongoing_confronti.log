@@ -1,0 +1,4 @@
+stack_motori − stack_ctx: per fold +0.0054 +0.0032 +0.0047, bootstrap (0.0044, 0.0031, 0.0059)
+stack_motori − xgb: per fold +0.0118 +0.0122 +0.0130, bootstrap (0.0123, 0.01, 0.0146)
+stack_ctx − xgb: per fold +0.0064 +0.0090 +0.0083, bootstrap (0.0078, 0.0056, 0.0104)
+stack − xgb: per fold -0.0015 +0.0006 -0.0005, bootstrap (-0.0005, -0.0024, 0.0013)

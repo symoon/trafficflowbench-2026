@@ -1,0 +1,13 @@
+D7_I10_E: 250 finestre
+D7_I10_W: 134 finestre
+D7_I210_E: 273 finestre
+D7_I210_W: 309 finestre
+D7_I405_N: 353 finestre
+D7_I405_S: 264 finestre
+D12_I5_N: 255 finestre
+D12_I5_S: 264 finestre
+onset: 402,170 righe, 307,189 eleggibili (158 s)
+lgb: fuori fold e finale (184 s)
+xgb: fuori fold e finale (213 s)
+cat: fuori fold e finale (325 s)
+secondo livello: 57 caratteristiche (334 s)

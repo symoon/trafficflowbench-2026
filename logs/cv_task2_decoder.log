@@ -1,0 +1,61 @@
+queue_onset fold 0 (7 s)
+queue_onset fold 1 (12 s)
+queue_onset fold 2 (17 s)
+queue_ongoing fold 0: λ interno 0: 0.8476, 0.25: 0.8467, 0.5: 0.8461, 1: 0.8441, 2: 0.8407 -> 0
+queue_ongoing fold 0 (181 s)
+queue_ongoing fold 1: λ interno 0: 0.8445, 0.25: 0.8439, 0.5: 0.8434, 1: 0.8420, 2: 0.8373 -> 0
+queue_ongoing fold 1 (339 s)
+queue_ongoing fold 2: λ interno 0: 0.8473, 0.25: 0.8469, 0.5: 0.8460, 1: 0.8450, 2: 0.8417 -> 0
+queue_ongoing fold 2 (473 s)
+
+queue_onset: IoU medio per corridoio, poi sui corridoi
+  valutazione attuali
+fold                   0       1       2   media  min_fold         meglio  finestre
+decoder                                                                            
+soglia            0.8649  0.8688  0.8611  0.8649    0.8611    0/0 diversi      2102
+topk_appross      0.8706  0.8729  0.8581  0.8672    0.8581  10/16 diversi      2102
+topk_appross_cal  0.8743  0.8564  0.8614  0.8640    0.8564  11/19 diversi      2102
+topk_mc           0.8660  0.8758  0.8577  0.8665    0.8577  11/18 diversi      2102
+topk_mc_cal       0.8754  0.8601  0.8577  0.8644    0.8577  10/18 diversi      2102
+    bootstrap per giorno, Δ dalla soglia: topk_appross +0.0023 [-0.0000, +0.0045]; topk_appross_cal -0.0009 [-0.0065, +0.0047]; topk_mc +0.0016 [-0.0009, +0.0042]; topk_mc_cal -0.0004 [-0.0051, +0.0042]
+  valutazione ufficiali
+fold                   0   media  min_fold       meglio  finestre
+decoder                                                          
+soglia            0.9169  0.9169    0.9169  0/0 diversi        40
+topk_appross      0.8919  0.8919    0.8919  0/1 diversi        40
+topk_appross_cal  0.9075  0.9075    0.9075  1/3 diversi        40
+topk_mc           0.9169  0.9169    0.9169  0/0 diversi        40
+topk_mc_cal       0.9174  0.9174    0.9174  2/3 diversi        40
+    bootstrap per giorno, Δ dalla soglia: topk_appross -0.0248 [-0.0833, +0.0000]; topk_appross_cal -0.0093 [-0.0774, +0.0354]; topk_mc +0.0000 [+0.0000, +0.0000]; topk_mc_cal +0.0008 [-0.0644, +0.0446]
+
+queue_ongoing: IoU medio per corridoio, poi sui corridoi
+  valutazione casuali
+fold                   0       1       2   media  min_fold        meglio  finestre
+decoder                                                                           
+soglia            0.8337  0.8240  0.8305  0.8294    0.8240   0/0 diversi      9752
+topk_appross      0.8318  0.8211  0.8274  0.8268    0.8211  6/24 diversi      9752
+topk_appross_cal  0.8303  0.8185  0.8263  0.8250    0.8185  6/24 diversi      9752
+topk_mc           0.8318  0.8225  0.8277  0.8274    0.8225  6/24 diversi      9752
+topk_mc_cal       0.8305  0.8193  0.8273  0.8257    0.8193  6/24 diversi      9752
+viterbi           0.8337  0.8240  0.8305  0.8294    0.8240   0/0 diversi      9752
+    bootstrap per giorno, Δ dalla soglia: topk_appross -0.0026 [-0.0047, -0.0005]; topk_appross_cal -0.0044 [-0.0068, -0.0020]; topk_mc -0.0020 [-0.0040, -0.0000]; topk_mc_cal -0.0037 [-0.0060, -0.0014]; viterbi +0.0000 [+0.0000, +0.0000]
+  valutazione attuali
+fold                   0       1       2   media  min_fold         meglio  finestre
+decoder                                                                            
+soglia            0.9146  0.8573  0.8837  0.8852    0.8573    0/0 diversi      2094
+topk_appross      0.9182  0.8613  0.8881  0.8892    0.8613  11/23 diversi      2094
+topk_appross_cal  0.9172  0.8639  0.8880  0.8897    0.8639  12/23 diversi      2094
+topk_mc           0.9180  0.8631  0.8910  0.8907    0.8631  11/23 diversi      2094
+topk_mc_cal       0.9174  0.8600  0.8926  0.8900    0.8600   9/23 diversi      2094
+viterbi           0.9146  0.8573  0.8837  0.8852    0.8573    0/0 diversi      2094
+    bootstrap per giorno, Δ dalla soglia: topk_appross +0.0055 [-0.0360, +0.0450]; topk_appross_cal +0.0072 [-0.0368, +0.0526]; topk_mc +0.0077 [-0.0318, +0.0446]; topk_mc_cal +0.0066 [-0.0368, +0.0443]; viterbi +0.0000 [+0.0000, +0.0000]
+  valutazione ufficiali
+fold                   0   media  min_fold       meglio  finestre
+decoder                                                          
+soglia            0.8527  0.8527    0.8527  0/0 diversi        40
+topk_appross      0.8563  0.8563    0.8563  4/7 diversi        40
+topk_appross_cal  0.8565  0.8565    0.8565  4/7 diversi        40
+topk_mc           0.8524  0.8524    0.8524  3/7 diversi        40
+topk_mc_cal       0.8582  0.8582    0.8582  4/7 diversi        40
+viterbi           0.8527  0.8527    0.8527  0/0 diversi        40
+    bootstrap per giorno, Δ dalla soglia: topk_appross +0.0040 [-0.0023, +0.0124]; topk_appross_cal +0.0041 [-0.0018, +0.0120]; topk_mc -0.0000 [-0.0043, +0.0048]; topk_mc_cal +0.0059 [-0.0016, +0.0167]; viterbi +0.0000 [+0.0000, +0.0000]

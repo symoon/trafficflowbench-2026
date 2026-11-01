@@ -1,0 +1,35 @@
+D7_I10_E validation: 64,662 celle per seme (121 s)
+D7_I10_E private: 64,774 celle per seme (240 s)
+D7_I10_W validation: 48,604 celle per seme (333 s)
+D7_I10_W private: 49,205 celle per seme (427 s)
+D7_I210_E validation: 137,442 celle per seme (684 s)
+D7_I210_E private: 134,899 celle per seme (937 s)
+D7_I210_W validation: 33,951 celle per seme (1014 s)
+D7_I210_W private: 36,715 celle per seme (1089 s)
+D7_I405_N validation: 169,335 celle per seme (1361 s)
+D7_I405_N private: 154,916 celle per seme (1474 s)
+D7_I405_S validation: 46,161 celle per seme (1512 s)
+D7_I405_S private: 46,641 celle per seme (1549 s)
+D12_I5_N validation: 114,595 celle per seme (1636 s)
+D12_I5_N private: 113,420 celle per seme (1722 s)
+D12_I5_S validation: 45,308 celle per seme (1761 s)
+D12_I5_S private: 44,440 celle per seme (1808 s)
+D12_I405_N validation: 40,369 celle per seme (1861 s)
+D12_I405_N private: 39,529 celle per seme (1909 s)
+D12_I405_S validation: 20,639 celle per seme (1940 s)
+D12_I405_S private: 18,301 celle per seme (1964 s)
+
+Media su corridoi e semi
+                S_state              S_LWR           
+split          private validation private validation
+metodo                                              
+interpolazione  0.9026     0.9036  0.8347     0.8335
+v6              0.9348     0.9349  0.8642     0.8645
+v7              0.9347     0.9349  0.8656     0.8657
+v9              0.9360     0.9359  0.8653     0.8652
+
+Differenze rispetto a v6 (meglio: corridoi·semi con differenza > 0)
+v7 validation: ΔS_state +0.0000 (meglio 10/20), ΔS_LWR +0.0013 (meglio 19/20)
+v7 private: ΔS_state -0.0001 (meglio 10/20), ΔS_LWR +0.0014 (meglio 17/20)
+v9 validation: ΔS_state +0.0010 (meglio 19/20), ΔS_LWR +0.0008 (meglio 15/20)
+v9 private: ΔS_state +0.0012 (meglio 20/20), ΔS_LWR +0.0011 (meglio 19/20)

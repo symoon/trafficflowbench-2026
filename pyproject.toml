@@ -1,0 +1,29 @@
+[project]
+name = "traffic-flow-bench"
+version = "0.1.0"
+description = "2026 IEEE Big Data Cup TrafficFlowBench: ricostruzione, code, fisica e ODME su dieci corridoi autostradali"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "kaggle==2.2.4",
+    "lightgbm==4.7.0",
+    "matplotlib==3.11.2",
+    "numpy==2.5.4",
+    "pandas==3.0.6",
+    "pyarrow==26.0.0",
+    "scipy==1.18.1",
+]
+
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tfb"]
+
+[dependency-groups]
+# solo per gli esperimenti con reti piccole sul server con la GPU (E2/E3); non serve all'invio attuale
+gpu = ["torch==2.14.1"]
+# prova di XGBoost accanto a LightGBM nel Task 1 (scripts/cv_pseudomesi.py --motore xgb); non serve all'invio attuale
+xgb = ["xgboost-cpu==3.4.1"]
+# prova di CatBoost accanto a LightGBM nel Task 2 (scripts/cv_task2_stack.py); non serve all'invio attuale
+catboost = ["catboost==1.2.10"]
